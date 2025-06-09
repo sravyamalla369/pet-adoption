@@ -43,7 +43,7 @@ const pets = [
     name: "Cleo",
     type: "Cat",
     breed: "Maine Coon",
-    image: " https://placecats.com/bella/300/200",
+    image: "https://placecats.com/bella/300/200",
     description: "Large and fluffy with a loving nature.",
     adopted: false
   },
@@ -96,7 +96,8 @@ function renderPets(filter = "All", searchTerm = "") {
 
   filteredPets.forEach((pet, index) => {
     const card = document.createElement("div");
-    card.className = "pet-card";
+    card.className = `pet-card ${pet.type.toLowerCase()}`; // 🐶 Adds 'dog' or 'cat' class
+
     if (pet.adopted) card.classList.add("adopted");
 
     card.innerHTML = `
