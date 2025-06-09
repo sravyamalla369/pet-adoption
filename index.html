@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Adopt a Pet</h1>
+    <input type="text" id="search" placeholder="Search by name or breed">
+    <div class="filters">
+      <button onclick="filterPets('All')">All</button>
+      <button onclick="filterPets('Dog')">Dogs</button>
+      <button onclick="filterPets('Cat')">Cats</button>
+    </div>
+    <p id="adoption-counter">Pets Adopted: 0</p>
+  </header>
+
+  <main id="pet-container"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
